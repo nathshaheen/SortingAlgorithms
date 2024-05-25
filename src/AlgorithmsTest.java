@@ -13,4 +13,16 @@ class AlgorithmsTest {
 
         assertArrayEquals(expectedResult, array);
     }
+
+
+    @Test
+    void mergeSort() {
+        int[] array = {2, 3, 4, 1, 6};
+        int[] expectedResult = {1, 2, 3, 4, 6};
+
+        Algorithms.mergeSort(array, 0, array.length - 1);
+
+        assertArrayEquals(expectedResult, array);
+    }
+
 }
