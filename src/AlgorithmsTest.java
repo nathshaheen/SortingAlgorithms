@@ -25,4 +25,13 @@ class AlgorithmsTest {
         assertArrayEquals(expectedResult, array);
     }
 
+
+    @Test
+    void quickSort() {
+        int[] array = {2, 3, 4, 1, 6};
+        int[] expectedResult = {1, 2, 3, 4, 6};
+
+        assertArrayEquals(expectedResult, Algorithms.quickSort(array, 0, array.length - 1));
+    }
+
 }
