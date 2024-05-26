@@ -34,4 +34,15 @@ class AlgorithmsTest {
         assertArrayEquals(expectedResult, Algorithms.quickSort(array, 0, array.length - 1));
     }
 
+
+    @Test
+    void bucketSort() {
+        int[] array = {2, 3, 4, 1, 6};
+        int[] expectedResult = {1, 2, 3, 4, 6};
+
+        Algorithms.bucketSort(array);
+
+        assertArrayEquals(expectedResult, array);
+    }
+
 }

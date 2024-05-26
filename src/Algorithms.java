@@ -1,3 +1,6 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class Algorithms {
 
 
@@ -85,7 +88,7 @@ public class Algorithms {
      */
     public static int[] quickSort(int[] array, int start, int end) {
         if (end - start + 1 <= 1) {
-             return array;
+            return array;
         }
 
         int pivot = array[end], left = start;
@@ -105,6 +108,28 @@ public class Algorithms {
         quickSort(array, left + 1, end);
 
         return array;
+    }
+
+
+    /**
+     * @param array array to be sorted
+     */
+    public static void bucketSort(int[] array) {
+        Map<Integer, Integer> bucket = new HashMap<>();
+        for (int i : array) {
+            if (bucket.containsKey(i)) {
+                bucket.put(i, bucket.get(i) + 1);
+            } else {
+                bucket.put(i, 1);
+            }
+        }
+
+        int n = 0;
+        for (Integer i : bucket.keySet()) {
+            for (int j = 0; j < bucket.get(i); j++) {
+                array[n++] = i;
+            }
+        }
     }
 
 }
