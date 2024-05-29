@@ -45,4 +45,13 @@ class AlgorithmsTest {
         assertArrayEquals(expectedResult, array);
     }
 
+
+    @Test
+    void countingSort() {
+        int[] array = {2, 3, 4, 1, 6};
+        int[] expectedResult = {1, 2, 3, 4, 6};
+
+        assertArrayEquals(expectedResult, Algorithms.countingSort(array));
+    }
+
 }
