@@ -1,0 +1,1 @@
+This project is inspired by Kuvina Saydaki's video "Every Sorting Algorithm Explained in 120 minutes (full series)" which can be found [here](https://www.youtube.com/watch?v=h1Bi0granxM&t=5167s "Every Sorting Algorithm Explained in 120 minutes (full series)").
